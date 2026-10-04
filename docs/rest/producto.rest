@@ -1,0 +1,120 @@
+
+@baseUrl = http://127.0.0.1:5000
+
+### Obtener todos los productos
+GET {{baseUrl}}/producto?page=1&limit=10&search=&almacen=&estado=true
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxYzBlZjM3Mi1lZTViLTQwZWEtOTlkYy1iODYwN2UyZGM4YjYiLCJlbWFpbCI6Im9zY2FyQG1haWwuY29tIiwiaWF0IjoxNzgxNzQ3NDgzLCJleHAiOjE3ODE3NTQ2ODN9.f0OWqfgxisyhDfF3a7tFILUqVDfO5X-wjTPy8iqbr2s
+
+### lista 2
+GET {{baseUrl}}/producto/lista?page=1&limit=10&search=&almacen=0&estado=true
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxYzBlZjM3Mi1lZTViLTQwZWEtOTlkYy1iODYwN2UyZGM4YjYiLCJlbWFpbCI6Im9zY2FyQG1haWwuY29tIiwiaWF0IjoxNzgxNzQ3NDgzLCJleHAiOjE3ODE3NTQ2ODN9.f0OWqfgxisyhDfF3a7tFILUqVDfO5X-wjTPy8iqbr2s
+###
+###
+
+### Obtener usuario por ID
+GET {{baseUrl}}/users/72944466-1742-40de-bab8-246fb0250f85
+
+###
+
+### Crear usuario
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+{
+    "name": "oscar3",
+    "email": "oscar3@mail.com",
+    "password": "oscar354321"
+}
+
+###
+
+### Actualizar usuario
+PATCH {{baseUrl}}/users/72944466-1742-40de-bab8-246fb0250f85
+Content-Type: application/json
+
+{
+    "name": "Oscar Pérez",
+    "email": "oscar.perez@mail.com",
+    "password": "nuevaClave123"
+}
+
+###
+
+###
+
+### Eliminar usuario
+DELETE {{baseUrl}}/users/1
+
+
+
+@baseUrl = http://localhost:5000
+
+### Producto 1
+POST {{baseUrl}}/producto
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxYzBlZjM3Mi1lZTViLTQwZWEtOTlkYy1iODYwN2UyZGM4YjYiLCJlbWFpbCI6Im9zY2FyQG1haWwuY29tIiwiaWF0IjoxNzg0ODU4Mzg5LCJleHAiOjE3ODQ4NjU1ODl9.ymG_AsuUcaDU3pHSKLd25Ya3drZ9RC9OV4lWFbykHLs
+Content-Type: application/json
+
+{
+  "nombre": "Laptop Lenovo ThinkPad E14",
+  "descripcion": "Intel Core i5, 16GB RAM, SSD 512GB",
+  "precio_venta_actual": 1250.50,
+  "imagen": "productos/thinkpad-e14.jpg",
+  "estado": true,
+  "categoriaId": 1
+}
+
+### Producto 2
+POST {{baseUrl}}/producto
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxYzBlZjM3Mi1lZTViLTQwZWEtOTlkYy1iODYwN2UyZGM4YjYiLCJlbWFpbCI6Im9zY2FyQG1haWwuY29tIiwiaWF0IjoxNzg0ODU4Mzg5LCJleHAiOjE3ODQ4NjU1ODl9.ymG_AsuUcaDU3pHSKLd25Ya3drZ9RC9OV4lWFbykHLs
+Content-Type: application/json
+
+{
+  "nombre": "Mouse Logitech G502",
+  "descripcion": "Mouse gamer RGB",
+  "precio_venta_actual": 75.90,
+  "imagen": "productos/logitech-g502.jpg",
+  "estado": true,
+  "categoriaId": 2
+}
+
+### Producto 3
+POST {{baseUrl}}/producto
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxYzBlZjM3Mi1lZTViLTQwZWEtOTlkYy1iODYwN2UyZGM4YjYiLCJlbWFpbCI6Im9zY2FyQG1haWwuY29tIiwiaWF0IjoxNzg0ODU4Mzg5LCJleHAiOjE3ODQ4NjU1ODl9.ymG_AsuUcaDU3pHSKLd25Ya3drZ9RC9OV4lWFbykHLs
+Content-Type: application/json
+
+{
+  "nombre": "Teclado Mecánico Redragon K552",
+  "descripcion": "Switches Blue",
+  "precio_venta_actual": 59.99,
+  "imagen": "productos/redragon-k552.jpg",
+  "estado": true,
+  "categoriaId": 2
+}
+
+### Producto 4
+POST {{baseUrl}}/producto
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxYzBlZjM3Mi1lZTViLTQwZWEtOTlkYy1iODYwN2UyZGM4YjYiLCJlbWFpbCI6Im9zY2FyQG1haWwuY29tIiwiaWF0IjoxNzg0ODU4Mzg5LCJleHAiOjE3ODQ4NjU1ODl9.ymG_AsuUcaDU3pHSKLd25Ya3drZ9RC9OV4lWFbykHLs
+Content-Type: application/json
+
+{
+  "nombre": "Monitor Samsung 24 Pulgadas",
+  "descripcion": "Full HD IPS",
+  "precio_venta_actual": 210.00,
+  "imagen": "productos/samsung24.jpg",
+  "estado": true,
+  "categoriaId": 3
+}
+
+### Producto 5
+POST {{baseUrl}}/producto
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxYzBlZjM3Mi1lZTViLTQwZWEtOTlkYy1iODYwN2UyZGM4YjYiLCJlbWFpbCI6Im9zY2FyQG1haWwuY29tIiwiaWF0IjoxNzg0ODU4Mzg5LCJleHAiOjE3ODQ4NjU1ODl9.ymG_AsuUcaDU3pHSKLd25Ya3drZ9RC9OV4lWFbykHLs
+Content-Type: application/json
+
+{
+  "nombre": "Disco SSD Kingston 1TB",
+  "descripcion": "NVMe PCIe Gen4",
+  "precio_venta_actual": 135.50,
+  "imagen": "productos/kingston-1tb.jpg",
+  "estado": true,
+  "categoriaId": 4
+}
